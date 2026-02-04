@@ -79,6 +79,69 @@ export default function Home() {
         </div>
       </section>
 
+
+      {/* WHAT WE OFFER SECTION */}
+      <section className="max-w-7xl mx-auto px-6 py-24 border-t border-white/5">
+        <div className="flex flex-col md:flex-row justify-between items-start mb-16 gap-8">
+          <div className="max-w-xl">
+            <h2 className="text-5xl font-black uppercase tracking-tighter mb-4">
+              Everything you need to <span className="text-lime-400">Scale</span>.
+            </h2>
+            <p className="text-gray-400 text-lg">
+              We've done the heavy lifting of hunting down documentation and testing endpoints so you don't have to.
+            </p>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {[
+            {
+              title: "Smart Filtering",
+              desc: "Sort APIs by CORS support, HTTPS, and Auth types (OAuth, API Key, or None).",
+              icon: "⚡"
+            },
+            {
+              title: "Code Snippets",
+              desc: "Instant copy-paste snippets for Fetch, Axios, and Python requests.",
+              icon: "📋"
+            },
+            {
+              title: "Uptime Shield",
+              desc: "Automated daily checks ensure you never integrate a dead endpoint.",
+              icon: "🛡️"
+            }
+          ].map((item, i) => (
+            <div key={i} className="p-8 rounded-[2rem] bg-gradient-to-b from-white/[0.03] to-transparent border border-white/5 hover:border-white/20 transition-all group">
+              <div className="text-3xl mb-4 group-hover:scale-110 transition-transform inline-block">{item.icon}</div>
+              <h3 className="text-xl font-bold mb-2 uppercase tracking-tight">{item.title}</h3>
+              <p className="text-gray-500 text-sm leading-relaxed">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* STATS SECTION */}
+      <section className="py-20 border-y border-white/5">
+        <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
+          <div>
+            <div className="text-4xl md:text-6xl font-black mb-2">15k+</div>
+            <p className="text-xs uppercase tracking-widest text-gray-500 font-bold">Daily Requests</p>
+          </div>
+          <div>
+            <div className="text-4xl md:text-6xl font-black mb-2 text-lime-400">5.2k</div>
+            <p className="text-xs uppercase tracking-widest text-gray-500 font-bold">Verified APIs</p>
+          </div>
+          <div>
+            <div className="text-4xl md:text-6xl font-black mb-2">99%</div>
+            <p className="text-xs uppercase tracking-widest text-gray-500 font-bold">Uptime Check</p>
+          </div>
+          <div>
+            <div className="text-4xl md:text-6xl font-black mb-2 text-lime-400">100%</div>
+            <p className="text-xs uppercase tracking-widest text-gray-500 font-bold">Open Source</p>
+          </div>
+        </div>
+      </section>
+
       {/* FOOTER */}
       <footer className="py-20 text-center border-t border-white/5">
         <h2 className="text-4xl font-bold mb-6">Ready to plug in?</h2>
