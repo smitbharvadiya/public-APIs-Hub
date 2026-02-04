@@ -1,18 +1,23 @@
 "use client";
-import { useState, use } from "react";
+import { useState, use, useMemo } from "react";
 import Link from 'next/link';
 import allApis from "@/data/apiData.json"; 
 import categories from "@/data/apiCategory.json";
 
 export default function CategoryPage({ params }: { params: Promise<{ slug: string }> }) {
     const { slug } = use(params);
+    const [searchTerm, setSearchTerm] = useState("");
     const [copiedAPI, setCopiedAPI] = useState<string | null>(null);
     
     const categoryInfo = categories.find(cat => cat.slug === slug);
-    
-    const filteredApis = allApis.filter(
-        (api) => api.category.toLowerCase() === categoryInfo?.name.toLowerCase()
-    );
+
+    const filteredApis = useMemo(() => {
+        return allApis.filter((api) => {
+            const matchesCategory = api.category.toLowerCase() === categoryInfo?.name.toLowerCase();
+            const matchesSearch = api.name.toLowerCase().includes(searchTerm.toLowerCase()) 
+            return matchesCategory && matchesSearch;
+        });
+    }, [searchTerm, categoryInfo]);
 
     const handleCopy = (url: string) => {
         if (!url) return;
@@ -53,21 +58,43 @@ export default function CategoryPage({ params }: { params: Promise<{ slug: strin
 
                 {/* Header */}
                 <header className="mb-20">
-                    <div className="flex items-center gap-4 mb-6">
-                        <span className="bg-lime-400 text-black px-3 py-1 rounded font-mono text-[10px] font-bold uppercase tracking-widest">
-                            Sector: {slug}
-                        </span>
-                        <div className="h-[1px] flex-1 bg-gradient-to-r from-white/10 to-transparent" />
+                    <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
+                        <div className="max-w-3xl">
+                            <div className="flex items-center gap-4 mb-6">
+                                <span className="bg-lime-400 text-black px-3 py-1 rounded font-mono text-[10px] font-bold uppercase tracking-widest">
+                                    Sector: {slug}
+                                </span>
+                                <div className="h-[1px] flex-1 bg-gradient-to-r from-white/10 to-transparent" />
+                            </div>
+                            
+                            <h1 className="text-6xl md:text-8xl font-black uppercase tracking-tighter mb-8 leading-[0.9]">
+                                {categoryInfo.name} <br/>
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white/40 to-transparent italic">Resources</span>
+                            </h1>
+                            
+                            <p className="text-gray-400 text-xl font-light leading-relaxed">
+                                {categoryInfo.description}
+                            </p>
+                        </div>
+
+                        {/* Search Input */}
+                        <div className="relative w-full md:w-80 group">
+                            <div className="absolute inset-0 bg-lime-400/5 blur-xl rounded-xl opacity-0 group-focus-within:opacity-100 transition-opacity" />
+                            <input 
+                                type="text"
+                                placeholder="Search endpoints..."
+                                value={searchTerm}
+                                onChange={(e) => setSearchTerm(e.target.value)}
+                                className="relative w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-sm font-mono focus:outline-none focus:border-lime-400/40 focus:ring-1 focus:ring-lime-400/20 transition-all placeholder:text-gray-700"
+                            />
+                            <div className="absolute right-4 top-1/2 -translate-y-1/2 flex items-center gap-2">
+                                <span className="h-4 w-[1px] bg-white/10" />
+                                <span className="text-lime-400/50 font-mono text-[10px] font-bold">
+                                    {filteredApis.length}
+                                </span>
+                            </div>
+                        </div>
                     </div>
-                    
-                    <h1 className="text-6xl md:text-8xl font-black uppercase tracking-tighter mb-8 leading-[0.9]">
-                        {categoryInfo.name} <br/>
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white/40 to-transparent italic">Resources</span>
-                    </h1>
-                    
-                    <p className="max-w-2xl text-gray-400 text-xl font-light leading-relaxed">
-                        {categoryInfo.description}
-                    </p>
                 </header>
 
                 {/* API Grid */}
