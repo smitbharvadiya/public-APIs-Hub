@@ -1,0 +1,168 @@
+[
+    {
+        "name": "OpenWeather",
+        "category": "Weather",
+        "url": "https://api.openweathermap.org",
+        "description": "Weather forecasts, historical data, and alerts",
+        "auth": "API Key",
+        "https": true,
+        "cors": "yes"
+    },
+    {
+        "name": "REST Countries",
+        "category": "Open Data",
+        "url": "https://restcountries.com",
+        "description": "Information about countries including population, currencies, and flags",
+        "auth": "No",
+        "https": true,
+        "cors": "yes"
+    },
+    {
+        "name": "Fixer",
+        "category": "Finance",
+        "url": "https://fixer.io",
+        "description": "Simple and lightweight API for current and historical foreign exchange rates",
+        "auth": "apiKey",
+        "https": true,
+        "cors": "Unknown"
+    },
+    {
+        "name": "Dog Facts",
+        "category": "Animals",
+        "url": "https://dukengn.github.io/Dog-facts-API/",
+        "description": "Random dog facts",
+        "auth": "No",
+        "https": true,
+        "cors": "yes"
+    },
+    {
+        "name": "The Cat API",
+        "category": "Animals",
+        "url": "https://thecatapi.com",
+        "description": "Public service all about Cats, including pictures and data",
+        "auth": "apiKey",
+        "https": true,
+        "cors": "no"
+    },
+    {
+        "name": "Jikan",
+        "category": "Anime",
+        "url": "https://jikan.moe",
+        "description": "Unofficial MyAnimeList API for anime discovery",
+        "auth": "No",
+        "https": true,
+        "cors": "yes"
+    },
+    {
+        "name": "Open Food Facts",
+        "category": "Food & Drink",
+        "url": "https://world.openfoodfacts.org/data",
+        "description": "Open database of food products with ingredients and nutrition facts",
+        "auth": "No",
+        "https": true,
+        "cors": "no"
+    },
+    {
+        "name": "Spotify",
+        "category": "Music",
+        "url": "https://beta.developer.spotify.com/documentation/web-api/",
+        "description": "View Spotify music catalog, manage users' libraries, get recommendations and more",
+        "auth": "OAuth",
+        "https": true,
+        "cors": "Unknown"
+    },
+    {
+        "name": "PoetryDB",
+        "category": "Books",
+        "url": "https://poetrydb.org",
+        "description": "Instant data from a vast collection of public domain poetry",
+        "auth": "No",
+        "https": true,
+        "cors": "yes"
+    },
+    {
+        "name": "CoinGecko",
+        "category": "Cryptocurrency",
+        "url": "http://www.coingecko.com/api",
+        "description": "Cryptocurrency Price, Market, and Developer/Social Data",
+        "auth": "No",
+        "https": true,
+        "cors": "yes"
+    },
+    {
+        "name": "Pokéapi",
+        "category": "Games",
+        "url": "https://pokeapi.co",
+        "description": "Comprehensive database of Pokémon information",
+        "auth": "No",
+        "https": true,
+        "cors": "Unknown"
+    },
+    {
+        "name": "WolframAlpha",
+        "category": "Machine Learning",
+        "url": "https://products.wolframalpha.com/api/",
+        "description": "Answers complex questions using curated data and algorithms",
+        "auth": "apiKey",
+        "https": true,
+        "cors": "Unknown"
+    },
+    {
+        "name": "GitHub",
+        "category": "Development",
+        "url": "https://docs.github.com/en/free-pro-team@latest/rest",
+        "description": "Make use of GitHub repositories, code and user info programmatically",
+        "auth": "OAuth",
+        "https": true,
+        "cors": "yes"
+    },
+    {
+        "name": "NASA",
+        "category": "Science",
+        "description": "NASA open APIs for space and astronomy data",
+        "auth": "API Key",
+        "https": true,
+        "cors": "yes"
+    },
+    {
+        "name": "OMDb",
+        "category": "Entertainment",
+        "description": "Movie information including ratings, cast, and posters",
+        "auth": "API Key",
+        "https": true,
+        "cors": "yes"
+    },
+    {
+        "name": "IP Geolocation",
+        "category": "Geolocation",
+        "description": "IP address location and network information",
+        "auth": "API Key",
+        "https": true,
+        "cors": "yes"
+    },
+    {
+        "name": "Public Holidays",
+        "category": "Calendar",
+        "description": "Public holiday data for countries worldwide",
+        "auth": "No",
+        "https": true,
+        "cors": "yes"
+    },
+    {
+        "name": "NoPhishy",
+        "category": "Anti-Malware",
+        "url": "https://rapidapi.com/Amiichu/api/exerra-phishing-check/",
+        "description": "Check links to see if they're known phishing attempts",
+        "auth": "apiKey",
+        "https": true,
+        "cors": "yes"
+    },
+    {
+        "name": "Open Brewery DB",
+        "category": "Food & Drink",
+        "description": "Open database of breweries and brewpubs",
+        "auth": "No",
+        "https": true,
+        "cors": "yes"
+    }
+]

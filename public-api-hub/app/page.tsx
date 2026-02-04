@@ -17,7 +17,7 @@ export default function Home() {
           <a href="#" className="hover:text-white transition-colors">Playground</a>
           <a href="#" className="hover:text-white transition-colors">Status</a>
         </div>
-        <Link href="/apis" className="bg-white text-black px-5 py-2 rounded-full text-sm font-bold hover:bg-lime-400 transition-all active:scale-95">
+        <Link href="/api" className="bg-white text-black px-5 py-2 rounded-full text-sm font-bold hover:bg-lime-400 transition-all active:scale-95">
           Explore Hub
         </Link>
       </nav>
@@ -83,7 +83,7 @@ export default function Home() {
       <footer className="py-20 text-center border-t border-white/5">
         <h2 className="text-4xl font-bold mb-6">Ready to plug in?</h2>
         <button className="group relative px-8 py-4 bg-white text-black font-black rounded-full overflow-hidden transition-all">
-          <Link href="/apis" className="relative z-10">EXPLORE ARCHIVE</Link>
+          <Link href="/api" className="relative z-10">EXPLORE ARCHIVE</Link>
           <div className="absolute inset-0 bg-lime-400 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
         </button>
       </footer>
