@@ -27,6 +27,60 @@
         "cors": "Unknown"
     },
     {
+        "name": "Marketstack",
+        "category": "Finance",
+        "url": "https://marketstack.com",
+        "description": "REST API interface delivering worldwide stock market data",
+        "auth": "apiKey",
+        "https": true,
+        "cors": "Unknown"
+    },
+    {
+        "name": "Covid-19 API",
+        "category": "Health",
+        "url": "https://covid19api.com/",
+        "description": "Data on the spread of Covid-19, including infections and recoveries",
+        "auth": "No",
+        "https": true,
+        "cors": "yes"
+    },
+    {
+        "name": "Chuck Norris Jokes",
+        "category": "Entertainment",
+        "url": "https://api.chucknorris.io",
+        "description": "JSON API for hand curated Chuck Norris jokes",
+        "auth": "No",
+        "https": true,
+        "cors": "Unknown"
+    },
+    {
+        "name": "Time Door",
+        "category": "Machine Learning",
+        "url": "https://timedoor.io",
+        "description": "A time series analysis API",
+        "auth": "apiKey",
+        "https": true,
+        "cors": "yes"
+    },
+    {
+        "name": "FishWatch",
+        "category": "Food & Drink",
+        "url": "https://www.fishwatch.gov/developers",
+        "description": "Information and pictures about individual fish species",
+        "auth": "No",
+        "https": true,
+        "cors": "yes"
+    },
+    {
+        "name": "URLScan.io",
+        "category": "Anti-Malware",
+        "url": "https://urlscan.io/about-api/",
+        "description": "Service to scan and analyse URLs for potential threats",
+        "auth": "apiKey",
+        "https": true,
+        "cors": "Unknown"
+    },
+    {
         "name": "Dog Facts",
         "category": "Animals",
         "url": "https://dukengn.github.io/Dog-facts-API/",
@@ -117,34 +171,11 @@
         "cors": "yes"
     },
     {
-        "name": "NASA",
-        "category": "Science",
-        "description": "NASA open APIs for space and astronomy data",
-        "auth": "API Key",
-        "https": true,
-        "cors": "yes"
-    },
-    {
-        "name": "OMDb",
-        "category": "Entertainment",
-        "description": "Movie information including ratings, cast, and posters",
-        "auth": "API Key",
-        "https": true,
-        "cors": "yes"
-    },
-    {
         "name": "IP Geolocation",
         "category": "Geolocation",
-        "description": "IP address location and network information",
-        "auth": "API Key",
-        "https": true,
-        "cors": "yes"
-    },
-    {
-        "name": "Public Holidays",
-        "category": "Calendar",
-        "description": "Public holiday data for countries worldwide",
-        "auth": "No",
+        "url": "https://ipgeolocation.io/",
+        "description": "IP Geolocation API with country, city, and time zone information",
+        "auth": "apiKey",
         "https": true,
         "cors": "yes"
     },
@@ -154,14 +185,6 @@
         "url": "https://rapidapi.com/Amiichu/api/exerra-phishing-check/",
         "description": "Check links to see if they're known phishing attempts",
         "auth": "apiKey",
-        "https": true,
-        "cors": "yes"
-    },
-    {
-        "name": "Open Brewery DB",
-        "category": "Food & Drink",
-        "description": "Open database of breweries and brewpubs",
-        "auth": "No",
         "https": true,
         "cors": "yes"
     }
